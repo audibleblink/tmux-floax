@@ -23,6 +23,9 @@ else
         # Create a new session named 'scratch' and attach to it
         tmux new-session -d -c "$(tmux display-message -p '#{pane_current_path}')" -s scratch
         tmux set-option -t scratch status off
+        tmux set-option -t scratch status-position 'bottom'
+        tmux set-option -t scratch status on
+        tmux set-option -t scratch status-right ''
         tmux_popup
     fi
 fi
